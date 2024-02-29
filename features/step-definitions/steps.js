@@ -18,7 +18,7 @@ Then(/^I should see home page$/, async () => {
 });
 
 Then(/^I should see error "(.*)"$/, async (message) => {
-    await LoginPage.userLockedOutErrorLogin(message)
+    await LoginPage.errorLoginMessage(message)
 });
 
 

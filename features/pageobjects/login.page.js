@@ -6,8 +6,8 @@ class LoginPage extends Page {
     get fieldUsername () { return $('#user-name');}
     get fieldPassword () { return $('#password');}
     get buttonLogin () { return $('#login-button');}
-    lockedoutErrorLogin = (dynamicMessage) => $(`//h3[text()="${dynamicMessage}"]`);
-    get errorLoginWithoutCredential () { return $('//h3[text()="Epic sadface: Username is required"]');}
+    errorLogin = (dynamicMessage) => $(`//h3[text()="${dynamicMessage}"]`);
+    // get errorLoginWithoutCredential () { return $('//h3[text()="Epic sadface: Username is required"]');}
 
     async login (username) {
         await this.fieldUsername.waitForDisplayed({ timeout:2500 });
@@ -16,8 +16,8 @@ class LoginPage extends Page {
         await this.buttonLogin.click();
     }
 
-    async userLockedOutErrorLogin (message) {
-        await expect(this.lockedoutErrorLogin(message)).toBeDisplayed();
+    async errorLoginMessage (message) {
+        await expect(this.errorLogin(message)).toBeDisplayed();
     }
 
     // async LoginWithoutCredential () {
