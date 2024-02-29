@@ -1,5 +1,5 @@
 {
-  "name": "DS_Sesi10_KadekDwi",
+  "name": "ds_sesi10_kadekdwi",
   "devDependencies": {
     "@wdio/allure-reporter": "^8.32.2",
     "@wdio/cli": "^8.32.3",

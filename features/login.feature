@@ -9,12 +9,12 @@ Feature: Swag Labs - Login
     Then I should see home page
 
     Examples:
-      |username                |       
-      |standard_user           |
-      |problem_user            |
-      |performance_glitch_user |
-      |error_user              |
-      |visual_user             | 
+      | username                |       
+      | standard_user           |
+      | problem_user            |
+      | performance_glitch_user |
+      | error_user              |
+      | visual_user             | 
 
 
   @negative
@@ -23,8 +23,8 @@ Feature: Swag Labs - Login
     Then I should see error "Epic sadface: Sorry, this user has been locked out."
 
     Examples:
-      |username        |           
-      |locked_out_user |  
+      | username        |           
+      | locked_out_user |  
       
 
   @negative

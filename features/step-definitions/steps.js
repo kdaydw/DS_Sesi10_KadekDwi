@@ -17,8 +17,8 @@ Then(/^I should see home page$/, async () => {
     await HomePage.validdateHomePage()
 });
 
-Then(/^I should see error "(.*)"$/, async (message) => {
-    await LoginPage.errorLoginMessage(message)
+Then(/^I should see error "(.*)"$/, async (dynamicMessage) => {
+    await LoginPage.errorLoginMessage(dynamicMessage)
 });
 
 
@@ -29,14 +29,14 @@ Given('I am logged in with {string}', async (username) => {
     await HomePage.validdateHomePage()
 });
 
-When('I add {string} to the cart and I click icon cart', async (product) => {
-    // const btnAddToCartElement = await $('#add-to-cart-sauce-labs-backpack') (APA PERLU AYU BUAT ADDPRODUCT.PAGE.JS?????)
-    // await btnAddToCartElement.click()
-});
+// When('I add {string} to the cart and I click icon cart', async (product) => {
+//     // const btnAddToCartElement = await $('#add-to-cart-sauce-labs-backpack') (APA PERLU AYU BUAT ADDPRODUCT.PAGE.JS?????)
+//     // await btnAddToCartElement.click()
+// });
 
-Then(/^I should see product on the cart page$/, async () => {
+// Then(/^I should see product on the cart page$/, async () => {
     
-});
+// });
 
 
 

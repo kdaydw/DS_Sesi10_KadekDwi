@@ -16,8 +16,8 @@ class LoginPage extends Page {
         await this.buttonLogin.click();
     }
 
-    async errorLoginMessage (message) {
-        await expect(this.errorLogin(message)).toBeDisplayed();
+    async errorLoginMessage (dynamicMessage) {
+        await expect(this.errorLogin(dynamicMessage)).toBeDisplayed();
     }
 
 
