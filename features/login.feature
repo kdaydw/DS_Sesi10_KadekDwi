@@ -1,14 +1,34 @@
 @login
 Feature: Swag Labs - Login
-Background: User on the login page
-  Given I am on the login page
 
   @positive
-  Scenario: As a standard_user, I want to login successfully
-    When I am login with "standard_user" credentianl
+  Scenario: As a user, I want to login successfully
+    Given I am on the login page
+    When I am login with <username> credential
     Then I should see home page
 
+
   @negative
-  Scenario: As a locked_out_user, I should get error message
-    When I am login with "locked_out_user" credentianl
+  Scenario: As a user, I should get error message
+    Given I am on the login page
+    When I am login with <username> credential
     Then I should see error "Epic sadface: Sorry, this user has been locked out."
+
+
+    Examples:
+      |username                |       
+      |standard_user           |
+      |problem_user            |
+      |performance_glitch_user |
+      |error_user              |
+      |visual_user             | 
+      |locked_out_user         | 
+
+
+  
+           
+           
+
+    
+    
+

@@ -1,1 +1,1 @@
-{"total":2,"items":[{"uid":"5896cb3a895082b628e910728e9cdd18","name":"Swag Labs - Login: As a locked_out_user, I should get error message","statistic":{"failed":0,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":4}},{"uid":"ebc683791156fb508f62b1cf30d1626e","name":"Swag Labs - Login: As a standard_user, I want to login successfully","statistic":{"failed":0,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":4}}]}
+{"total":0,"items":[]}

@@ -9,7 +9,7 @@ Given(/^I am on the login page$/, async () => {
     await LoginPage.open()
 });
 
-When(/^I am login with "(.*)" credentianl$/, async (username) => {
+When('I am login with {string} credential', async (username) => {
     await LoginPage.login(username)
 });
 
