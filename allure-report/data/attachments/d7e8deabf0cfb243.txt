@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "#add-to-cart-test.allthethings()-t-shirt-(red)"
-}

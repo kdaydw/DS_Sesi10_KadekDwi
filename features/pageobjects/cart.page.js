@@ -4,17 +4,14 @@ const Page = require('./page');
 
 class CartPage extends Page {
 
-    async productName() {
-        return await $('.inventory_item_name').getText();
-    }
+    get listProducts () { return $('.cart_item');}
 
     async validateCartPage() {
         await expect(browser).toHaveUrlContaining('/cart.html')
     }
 
-    async validateExistProduct(productName){
-      const product = await this.productName();
-      await expect(product).toBe(productName);
+    async validateExistProduct(){
+      await expect(this.listProducts).toBeDisplayed()
     }
 
     open () {

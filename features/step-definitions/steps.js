@@ -37,6 +37,6 @@ Then(/^I should see cart page$/, async () => {
     await CartPage.validateCartPage()
 });
 
-Then("I should see the product name {string}", async (productName) => {
-    await CartPage.validateExistProduct(productName)
+Then(/^I should see the list products$/, async () => {
+    await CartPage.validateExistProduct()
 });

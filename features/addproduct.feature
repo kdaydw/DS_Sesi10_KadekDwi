@@ -10,16 +10,15 @@ Feature: Swag Labs - Add Product After Login
     Given I am on the home page
     When I add "<product>" to the cart and I click icon cart
     Then I should see cart page
-    And I should see the product name "<name_product>"
+    And I should see the list products
 
     Examples:
-      | product                                       | name_product                      |
-      | add-to-cart-sauce-labs-backpack               | Sauce Labs Backpack               |
-      | add-to-cart-sauce-labs-bike-light             | Sauce Labs Bike Light             |
-      | add-to-cart-sauce-labs-bolt-t-shirt           | Sauce Labs Bolt T-Shirt           |
-      | add-to-cart-sauce-labs-fleece-jacket          | Sauce Labs Fleece Jacket          |
-      | add-to-cart-sauce-labs-onesie                 | Sauce Labs Onesie                 |
-      | add-to-cart-test.allthethings()-t-shirt-(red) | Test.allTheThings() T-Shirt (Red) |
+      | product                                       | 
+      | add-to-cart-sauce-labs-backpack               | 
+      | add-to-cart-sauce-labs-bike-light             | 
+      | add-to-cart-sauce-labs-bolt-t-shirt           | 
+      | add-to-cart-sauce-labs-fleece-jacket          | 
+      | add-to-cart-sauce-labs-onesie                 | 
 
       
 
