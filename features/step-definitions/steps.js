@@ -3,6 +3,7 @@ const { Given, When, Then } = require('@wdio/cucumber-framework');
 
 const LoginPage = require('../pageobjects/login.page.js');
 const HomePage = require('../pageobjects/home.page.js');
+const CartPage = require('../pageobjects/cart.page.js');
 
 //BDD Login
 Given(/^I am on the login page$/, async () => {
@@ -23,23 +24,19 @@ Then(/^I should see error "(.*)"$/, async (dynamicMessage) => {
 
 
 //BDD Add Products To Cart
-Given('I am logged in with {string}', async (username) => {
-    await LoginPage.open()
-    await LoginPage.login(username)
+Given(/^I am on the home page$/, async () => {
     await HomePage.validdateHomePage()
 });
 
-// When('I add {string} to the cart and I click icon cart', async (product) => {
-//     // const btnAddToCartElement = await $('#add-to-cart-sauce-labs-backpack') (APA PERLU AYU BUAT ADDPRODUCT.PAGE.JS?????)
-//     // await btnAddToCartElement.click()
-// });
+When('I add {string} to the cart and I click icon cart', async (product) => {
+    await HomePage.addProduct(product)
+    await $('#shopping_cart_container').click()
+});
 
-// Then(/^I should see product on the cart page$/, async () => {
-    
-// });
+Then(/^I should see cart page$/, async () => {
+    await CartPage.validateCartPage()
+});
 
-
-
-
-
-
+Then("I should see the product name {string}", async (productName) => {
+    await CartPage.validateExistProduct(productName)
+});

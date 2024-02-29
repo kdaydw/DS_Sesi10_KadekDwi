@@ -10,6 +10,10 @@ class HomePage extends Page {
         await expect(this.listProducts).toBeDisplayed()
     }
 
+    async addProduct(idProduct) {
+        await $(`#${idProduct}`).click()
+    }
+
     open () {
         return super.open('/inventory.html');
     }
