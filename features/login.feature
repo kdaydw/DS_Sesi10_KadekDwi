@@ -1,9 +1,10 @@
 @login
 Feature: Swag Labs - Login
+  Background: User on the login page
+    Given I am on the login page
 
   @positive
   Scenario: As a user, I want to login successfully
-    Given I am on the login page
     When I am login with "<username>" credential
     Then I should see home page
 
@@ -18,7 +19,6 @@ Feature: Swag Labs - Login
 
   @negative
   Scenario: As a user, I should get error message
-    Given I am on the login page
     When I am login with "<username>" credential
     Then I should see error "Epic sadface: Sorry, this user has been locked out."
 
@@ -29,7 +29,6 @@ Feature: Swag Labs - Login
 
   @negative
   Scenario: As a user, I should get error message
-    Given I am on the login page
     When I am login with "" credential
     Then I should see error "Epic sadface: Username is required"
     

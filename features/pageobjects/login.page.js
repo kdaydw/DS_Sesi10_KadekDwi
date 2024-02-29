@@ -20,10 +20,6 @@ class LoginPage extends Page {
         await expect(this.errorLogin(message)).toBeDisplayed();
     }
 
-    // async LoginWithoutCredential () {
-    //     await expect(this.errorLoginWithoutCredential).toBeDisplayed();
-    // }
-
 
     open () {
         return super.open('/'); //NOTE: Will open https://www.saucedemo.com/
